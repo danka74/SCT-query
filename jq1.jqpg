@@ -1,0 +1,11 @@
+jq -r '.expansion.contains[] | .code as $code | .display as $display | 
+    ( .designation[] | select(.language=="en" and .use.code=="900000000000003001") )
+    | [$code, .value, $display] | @tsv'
+/home/daniel/git/SCT-query/Response-1724166397172
+
+
+
+jq -r '.expansion.contains[] | .code as $code | .display as $display | 
+    ( .designation |  map(select(.language=="sv" and .use.code=="900000000000013009")) | length )
+    | [$code, $display, .] | @tsv'
+/home/daniel/git/SCT-query/Response-1724166397172

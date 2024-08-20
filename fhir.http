@@ -1,0 +1,11 @@
+@baseUrl = https://snowstorm.snomedtools.org/fhir
+
+
+GET {{baseUrl}}/ValueSet/$expand
+    ?url=http://snomed.info/sct/45991000052106?fhir_vs=ecl/<<394658006
+    &includeDesignations=true
+    &count=500
+Accept-Language: sv,en
+Accept: application/json
+
+
